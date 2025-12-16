@@ -1,0 +1,62 @@
+# Configuration de l'application
+app:
+  name: "Détection de Maladies des Pommes"
+  version: "1.0.0"
+  author: "Votre Nom"
+
+# Configuration des modèles
+models:
+  image_size: 224
+  batch_size: 32
+  learning_rate: 0.0001
+  epochs: 30
+
+  fruit_classes:
+    0: "Pomme Sain"
+    1: "Pomme Tavelure"
+    2: "Pomme Pourrie"
+
+  leaf_classes:
+    0: "Feuille Sain"
+    1: "Tavelure Pommier"
+    2: "Pourriture Noire"
+    3: "Rouille Cèdre"
+
+# Chemins des fichiers
+paths:
+  models_dir: "models"
+  data_dir: "data"
+  results_dir: "results"
+  logs_dir: "logs"
+
+# Configuration Streamlit
+streamlit:
+  theme:
+    primaryColor: "#4CAF50"
+    backgroundColor: "#FFFFFF"
+    secondaryBackgroundColor: "#F0F2F6"
+    textColor: "#262730"
+    font: "sans serif"
+
+  layout: "wide"
+  initial_sidebar_state: "expanded"
+
+# Informations sur les maladies
+diseases:
+  tavelure:
+    name: "Tavelure du pommier"
+    symptoms: "Taches olive-brun sur feuilles et fruits, déformations"
+    treatment: "Fongicides (soufre, cuivre), élimination des parties infectées"
+    prevention: "Bon drainage, variétés résistantes, taille d'aération"
+
+  pourriture_noire:
+    name: "Pourriture noire"
+    symptoms: "Taches violettes sur fruits, pourriture marron"
+    treatment: "Retrait des fruits infectés, fongicides (captane)"
+    prevention: "Élagage, récolte au bon moment, stockage adapté"
+
+  rouille_cedre:
+    name: "Rouille du cèdre"
+    symptoms: "Taches orange sur feuilles, défoliation"
+    treatment: "Fongicides (myclobutanil), élimination des genévriers"
+    prevention: "Distance avec hôtes alternatifs, variétés résistantes"
